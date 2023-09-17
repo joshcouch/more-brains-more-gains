@@ -1,0 +1,66 @@
+food_item,g_protein_per_kg,kcal_per_kg,gbp_per_kg
+spreadable butter,5.0,5470.0,8.36
+butter,6.0,7440.0,8.92
+cheddar cheese,254.0,4160.0,9.49
+hard cheese,249.0,4110.0,10.19
+parmesan cheese,362.0,4150.0,20.86
+soft cheese,98.0,2520.0,11.2
+quiche,125.0,3050.0,7.012658227848102
+cooked ham (sliced),184.0,1070.0,17.933333333333326
+continental sliced deli type meat,209.0,4380.0,35.857142857142854
+cooked turkey/chicken (sliced),232.0,1140.0,16.642857142857142
+multipack meat based snack,251.0,5040.0,5.675
+chilled pot dessert,43.0,2140.0,4.984615384615385
+fresh white fish fillets,203.0,1540.0,19.67
+fresh salmon fillets,236.0,1380.0,20.43
+frozen prawns,154.0,3770.0,18.77
+canned tuna,249.0,1090.0,6.545454545454546
+bananas,12.0,810.0,1.15
+grapes,7.0,650.0,4.13
+small oranges,8.0,360.0,2.72
+plums,5.0,670.0,2.85
+blueberries,9.0,400.0,11.72
+raspberries,8.0,250.0,13.37
+tomatoes,7.0,890.0,3.13
+carrots,6.0,220.0,0.7
+onions,10.0,350.0,1.11
+mushrooms,14.0,1060.0,3.47
+pre-packed salad,10.0,130.0,7.942857142857143
+broccoli,37.0,280.0,2.39
+courgettes,13.0,160.0,2.95
+peppers,17.0,770.0,0.99
+frozen vegetable burger,166.0,1610.0,7.47634069400631
+beef mince,207.5,1370.0,8.39
+beef steak,267.0,1890.0,18.31
+beef roasting joint,298.0,1880.0,12.36
+lamb loin chop/steak,280.0,1980.0,16.45
+pork loin chops with bone,263.5,1220.0,8.74
+gammon,275.0,1990.0,8.83
+bacon,234.0,3500.0,9.28
+fresh/chilled whole chicken,177.00000000000003,2180.0,3.84
+fresh boneless chicken breast,289.0,1840.0,8.13
+fresh turkey diced/minced,286.0,1760.0,8.6
+pork sausages,144.5,3080.0,6.89
+oven ready gammon/pork joint,175.0,2040.0,8.207407407407407
+new potatoes,25.0,1570.0,1.44
+white potatoes,25.0,970.0,0.74
+baking potatoes,25.0,970.0,0.86
+sweet potato,12.0,870.0,1.23
+canned tomatoes,11.0,190.0,1.7721518987341771
+baked beans,50.0,810.0,2.5696969696969703
+canned sweetcorn,26.0,780.0,3.7918215613382897
+packet of peanuts,247.0,6020.0,6.000000000000001
+canned fruit,4.0,450.0,2.752941176470588
+dried fruit pack,30.0,2560.0,13.028571428571427
+peanut butter,228.0,6070.0,7.339130434782609
+dry spaghetti or pasta,21.0,720.0,1.96
+microwavable rice,41.0,1610.0,4.36
+popcorn,90.0,4700.0,19.5
+couscous,72.0,1780.0,3.066666666666667
+granulated white sugar,0.0,3940.0,1.12
+LIDL greek style protein yoghurt,110.0,650.0,3.3
+"LIDL protein granola, cranberry and almond",249.0,4340.0,5.475
+"LIDL protein bar, chocolate brownie",500.0,4060.0,24.37037037037037
+"LIDL eggs, golden yolk",126.0,1310.0,40.61224489795918
+LIDL chicken breast fillets,240.0,1060.0,7.2153846153846155
+PROTEIN_POWDER pbn whey protein,768.0,3940.0,15.99
