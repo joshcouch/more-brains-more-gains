@@ -1,13 +1,20 @@
 import boto3
+import os
 from utils.constants import PARTITION_KEY, G_PROTEIN_PER_KG, KCAL_PER_KG, GBP_PER_KG
-import pandas as pd
 
 class DynamodbReader():
     def __init__(self, table_name: str, region_name: str ='eu-north-1'):
         self.service_name = 'dynamodb'
         self.table_name = table_name
         self.region_name = region_name
-        self.dynamodb = boto3.resource(self.service_name, region_name=self.region_name)
+        aws_access_key_id = os.environ['AWS_ACCESS_KEY_ID']
+        aws_secret_access_key = os.environ['AWS_SECRET_ACCESS_KEY']
+        self.dynamodb = boto3.resource(
+            self.service_name,
+            region_name=self.region_name,
+            aws_access_key_id=aws_access_key_id,
+            aws_secret_access_key=aws_secret_access_key
+        )
         self.table = self.dynamodb.Table(self.table_name)
         
     def scan_db(self, attrs: list):
