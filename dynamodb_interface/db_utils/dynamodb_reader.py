@@ -1,5 +1,5 @@
 import boto3
-import os
+import streamlit as st
 from utils.constants import PARTITION_KEY, G_PROTEIN_PER_KG, KCAL_PER_KG, GBP_PER_KG
 
 class DynamodbReader():
@@ -7,8 +7,8 @@ class DynamodbReader():
         self.service_name = 'dynamodb'
         self.table_name = table_name
         self.region_name = region_name
-        aws_access_key_id = os.environ['AWS_ACCESS_KEY_ID']
-        aws_secret_access_key = os.environ['AWS_SECRET_ACCESS_KEY']
+        aws_access_key_id = st.secrets['AWS_ACCESS_KEY_ID']
+        aws_secret_access_key = st.secrets['AWS_SECRET_ACCESS_KEY']
         self.dynamodb = boto3.resource(
             self.service_name,
             region_name=self.region_name,
