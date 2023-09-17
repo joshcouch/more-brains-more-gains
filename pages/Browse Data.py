@@ -14,3 +14,6 @@ all_items = load_all_items()
 browser.load_db_items(all_items)
 
 browser.display_data()
+
+if st.button("Reload Data"):
+    st.cache_data.clear()
