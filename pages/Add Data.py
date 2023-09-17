@@ -3,7 +3,6 @@ from utils.food_item import FoodItem
 from utils.constants import FOOD_ITEM, KCAL_PER_KG, GBP_PER_KG, G_PROTEIN_PER_KG
 from dynamodb_interface.db_utils.dynamodb_writer import DynamodbWriter
 
-# Title and Sidebar
 st.title("Add an Ingredient to the Database")
 
 st.markdown(
@@ -43,11 +42,11 @@ if food_item.check_valid_stats():
 
     writer = DynamodbWriter(table_name='food_nutrition_data', region_name='eu-north-1')
 
-    st.button(
-        "Save to database", 
-        on_click=lambda: writer.write_single_item(food_item.to_dict())
-    )
-    
+    if st.button("Save to database"):
+        response = writer.write_single_item(food_item.to_dict())
+        if response["ResponseMetadata"]["HTTPStatusCode"] == 200:
+            st.write("Successfuly Saved Ingredient")
+        
 else:
     st.button(
         "Save to database",
