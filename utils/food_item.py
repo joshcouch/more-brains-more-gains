@@ -30,3 +30,9 @@ class FoodItem():
             GBP_PER_KG: self.gbp_per_kg,
             DATA_SOURCE: self.data_source,
         }
+    
+    def convert_value_per_portion_to_per_kg(self, value_per_portion: float, portion_size_g: float):
+        return (value_per_portion/portion_size_g) * 1000
+
+    def convert_cost_per_product_to_per_portion(self, gbp_per_product: float, n_portions: float):
+        return gbp_per_product/n_portions

@@ -1,7 +1,6 @@
 import streamlit as st
-from utils.food_item import FoodItem
-from utils.constants import FOOD_ITEM, KCAL_PER_KG, GBP_PER_KG, G_PROTEIN_PER_KG
 from dynamodb_interface.db_utils.dynamodb_writer import DynamodbWriter
+from utils.add_data_inputs import add_per_kg_information, add_label_information
 
 st.title("Add an Ingredient to the Database")
 
@@ -16,25 +15,13 @@ st.subheader("Ingredient Stats Calculator")
 
 st.subheader("Save Ingredient")
 
-food_item_name = st.text_input("Name of Ingredient")
+input_method = st.selectbox("Choose input method", options=["Label information", "Per kg information"])
 
-g_protein_per_kg = st.number_input("Grams of protein per kilogram (g/kg)")
-
-kcal_per_kg = st.number_input("Calories per kilogram (kcal/kg)")
-
-gbp_per_kg = st.number_input("Cost per kilogram (£/kg)")
-
-food_item = FoodItem()
-
-food_item.assign_stats(
-    {
-        FOOD_ITEM: food_item_name,
-        G_PROTEIN_PER_KG: g_protein_per_kg,
-        KCAL_PER_KG: kcal_per_kg,
-        GBP_PER_KG: gbp_per_kg,
-    },
-    data_source="webapp",
-)
+if input_method == "Per kg information":
+    food_item = add_per_kg_information()
+    
+elif input_method == "Label information":
+    food_item = add_label_information()
 
 if food_item.check_valid_stats():
     
