@@ -41,3 +41,6 @@ class DataBrowser():
             column_config=pretty_col_names,
             hide_index=True
         )
+    
+    def get_top_10_by_col(self, col: str):
+        return self.df[[PARTITION_KEY, col]].sort_values(by=col, ascending=False)[:10]
