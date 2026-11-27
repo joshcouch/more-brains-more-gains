@@ -12,7 +12,6 @@ def load_data() -> pd.DataFrame:
     return pd.DataFrame(reader.scan_all_items())
 
 data = load_data()
-data
 
 # Title and Sidebar
 st.title("Meal Nutrition Calculator")
