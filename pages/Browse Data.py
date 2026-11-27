@@ -1,11 +1,11 @@
 import streamlit as st
-from dynamodb_interface.db_utils.dynamodb_reader import DynamodbReader
+from dynamodb_interface.db_utils.dynamodb_reader import CsvReader
 from utils.data_wrangling.data_browser import DataBrowser
 from utils.data_browser_plots import plot_bar
 from utils.constants import PARTITION_KEY, G_PROTEIN_PER_GBP, PARTITION_KEY_PRETTY, G_PROTEIN_PER_GBP_PRETTY, \
     G_PROTEIN_PER_KCAL, G_PROTEIN_PER_KCAL_PRETTY
 
-reader = DynamodbReader(table_name='food_nutrition_data', region_name='eu-north-1')
+reader = CsvReader()
 browser = DataBrowser()
 
 @st.cache_data

@@ -4,6 +4,8 @@ from utils.add_data_inputs import add_per_kg_information, add_label_information
 
 st.title("Add an Ingredient to the Database")
 
+st.warning("This feature is currently inactive.")
+
 st.markdown(
     """
 Use this page to add to the ingredient database. Share your favourite 
@@ -31,7 +33,7 @@ if food_item.check_valid_stats():
 
     if st.button("Save to database"):
         response = writer.write_single_item(food_item.to_dict())
-        if response["ResponseMetadata"]["HTTPStatusCode"] == 200:
+        if response:#["ResponseMetadata"]["HTTPStatusCode"] == 200:
             st.write("Successfuly Saved Ingredient")
         
 else:

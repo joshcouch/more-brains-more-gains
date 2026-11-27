@@ -16,3 +16,5 @@ KCAL_PER_KG_PRETTY = "Calories per kilogram (kcal/kg)"
 GBP_PER_KG_PRETTY = "Cost per kilogram (£/kg)" 
 G_PROTEIN_PER_KCAL_PRETTY = "Grams of protein per calorie (g/kcal)"
 G_PROTEIN_PER_GBP_PRETTY = "Grams of protein per GBP (g/£)"
+
+GRAMS = 'GRAMS'

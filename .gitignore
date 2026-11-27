@@ -1,3 +1,8 @@
 */secrets.toml
 
 *.pyc
+.python-version
+uv.lock
+pyproject.toml
+.venv
+*__pycache__*

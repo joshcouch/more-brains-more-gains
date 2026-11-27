@@ -1,12 +1,14 @@
 import pandas as pd
+from utils.constants import G_PROTEIN_PER_KG, KCAL_PER_KG, GBP_PER_KG, GRAMS, FOOD_ITEM
+
 
 def calc_portion_nutrition(recipe_data: pd.DataFrame, n_portions: int):
-    portion_calories = (recipe_data["KCAL_PER_KG"] * recipe_data["Grams"] / 1000).sum() / n_portions
-    portion_proteins = (recipe_data["G_PROTEIN_PER_KG"] * recipe_data["Grams"] / 1000).sum() / n_portions
-    portion_cost = (recipe_data["GBP_PER_KG"] * recipe_data["Grams"] / 1000).sum() / n_portions
+    portion_calories = (recipe_data[KCAL_PER_KG] * recipe_data[GRAMS] / 1000).sum() / n_portions
+    portion_proteins = (recipe_data[G_PROTEIN_PER_KG] * recipe_data[GRAMS] / 1000).sum() / n_portions
+    portion_cost = (recipe_data[GBP_PER_KG] * recipe_data[GRAMS] / 1000).sum() / n_portions
     cost_per_100_g_protein = portion_cost / portion_proteins * 100
     kcal_per_100_g_protein = portion_calories / portion_proteins
-    ingredients = [f"{ingredient}, {weight}g" for ingredient, weight in zip(recipe_data.NAME.values, recipe_data.Grams.values)]
+    ingredients = [f"{ingredient}, {weight}g" for ingredient, weight in zip(recipe_data[FOOD_ITEM].values, recipe_data[GRAMS].values)]
     
     portion_dict = {
         'Total calories (kcal)': portion_calories,

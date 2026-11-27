@@ -1,6 +1,6 @@
 # More Brains, More Gains
 
-A lightweight Streamlit app for calculating the nutritional value-to-cost ratio of meals, built to make everyday food choices faster to compare on price and nutrition.
+A lightweight Streamlit app for calculating the nutritional value-to-cost ratio of meals, built to make everyday food choices faster to compare on price and nutrition. It used to be connected to an AWS DynamoDB database to allow users to add their own data, but this has been replaced with a static CSV in this repo.
 
 Originally prototyped with ChatGPT shortly after its initial release and later revisited on Streamlit Community Cloud, this project is a practical example of AI-assisted rapid prototyping, iterative product refinement, and dependency maintenance across Python versions.
 
